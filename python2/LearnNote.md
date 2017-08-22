@@ -85,6 +85,7 @@ self.assertEqual(True, None is not False)
 ```
 
 * python 中的is
+
 ```py
 # is判断的是a对象是否就是b对象，是通过id来判断的
 # ==判断的是a对象的值是否和b对象的值相等，是通过value来判断的
@@ -110,5 +111,23 @@ True
 12777000
 ```
 
-
+`2017.8.22 19:09`
 ### about_list
+```py
+nums = list()
+self.assertEqual([], nums)
+```
+```py
+noms = ['peanut', 'butter', 'and', 'jelly']
+
+self.assertEqual(['peanut'], noms[0:1])
+self.assertEqual(['peanut', 'butter'], noms[0:2])
+self.assertEqual([], noms[2:2])
+self.assertEqual(['and', 'jelly'], noms[2:20])########
+self.assertEqual([], noms[4:0])
+self.assertEqual([], noms[4:100])########
+self.assertEqual([], noms[5:0])
+
+self.assertEqual(['and', 'jelly'], noms[2:])
+self.assertEqual(['peanut', 'butter',], noms[:2]) ########
+```
