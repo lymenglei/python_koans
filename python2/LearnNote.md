@@ -131,3 +131,41 @@ self.assertEqual([], noms[5:0])
 self.assertEqual(['and', 'jelly'], noms[2:])
 self.assertEqual(['peanut', 'butter',], noms[:2]) ########
 ```
+
+`2017.8.23 10:28`
+### about_list_assignments
+
+### about_dictionaries  字典
+
+```py
+empty_dict = dict()
+self.assertEqual(dict, type(empty_dict))
+self.assertEqual(dict(), empty_dict)
+self.assertEqual(0, len(empty_dict))  # len is 0
+```
+
+```py
+dict1 = {'one': 'uno', 'two': 'dos'}
+dict2 = {'two': 'dos', 'one': 'uno'}
+
+self.assertEqual(True, dict1 == dict2)
+```
+
+### about_string_manipulation
+> 其他string 相关函数
+
+```py
+string = "Bacon, lettuce and tomato"
+self.assertEqual("let", string[7:10]) # 忽略掉空格
+len(string) == 26
+```
+```py
+string = r'\n'   # raw string
+self.assertNotEqual('\n', string)
+self.assertEqual("\\n", string)
+self.assertEqual(2, len(string))
+```
+
+### about_tuples
+
+### about_methods
